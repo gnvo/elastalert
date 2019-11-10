@@ -1,3 +1,5 @@
 FROM python:3-alpine
 
-RUN pip install --no-cache-dir elastalert
+RUN apk add --no-cache \
+        build-base && \
+    pip install --no-cache-dir elastalert
